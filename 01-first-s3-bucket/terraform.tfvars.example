@@ -1,0 +1,34 @@
+# =============================================================================
+# VARIABLES CONFIGURATION - EXAMPLE FILE
+# =============================================================================
+# COPY THIS FILE AS terraform.tfvars AND FILL WITH YOUR VALUES
+# =============================================================================
+
+# 📋 BASIC PROJECT CONFIGURATION
+project     = "your-project-name"        # REPLACE: Your project name
+environment = "development"              # CHOOSE: development/staging/production
+owner       = "your-name"                # REPLACE: Your identifier
+aws_region  = "us-east-1"               # CHOOSE: AWS region
+
+# 🔐 AWS CREDENTIALS (GET FROM IAM)
+# access_key = "YOUR_ACCESS_KEY_HERE"    # UNCOMMENT and add your key
+# secret_key = "YOUR_SECRET_KEY_HERE"    # UNCOMMENT and add your secret
+
+# 🏷️ OPTIONAL RESOURCE TAGS
+tags = {
+  Department = "devops"     # MODIFY: Your department
+  CostCenter = "learning"   # MODIFY: Your cost center
+  Version    = "1.0"        # MODIFY: Your version
+}
+
+# 💾 S3 SPECIFIC CONFIGURATION
+s3_config = {
+  enable_versioning = false  # SET: true to keep file versions
+  force_destroy     = true   # SET: false to prevent accidental deletion
+}
+
+# ⚠️ INSTRUCTIONS:
+# 1. Copy this file: cp terraform.tfvars.example terraform.tfvars
+# 2. Edit terraform.tfvars with your actual values
+# 3. NEVER commit terraform.tfvars (it's in .gitignore)
+# 4. Keep this example updated with new variables
