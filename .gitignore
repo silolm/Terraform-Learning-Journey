@@ -1,0 +1,115 @@
+cd ~/Terraform_Projects/Terraform-Learning-Journey
+cat > .gitignore << 'EOF'
+# ========================
+# TERRAFORM
+# ========================
+
+# Terraform directory with providers and cache
+.terraform/
+*.terraform*
+
+# State files
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+terraform.tfstate
+
+# Lock files
+.terraform.tfstate.lock.info
+.terraform.lock.hcl
+
+# Variables with sensitive data
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Plan files
+*.tfplan
+
+# Terraform logs
+*.log
+terraform.log
+
+# ========================
+# AWS AND CREDENTIALS
+# ========================
+
+# AWS credentials
+*.pem
+*.key
+*.p12
+*.crt
+*.csr
+*.der
+
+# AWS CLI configuration
+.aws/credentials
+.aws/config
+
+# ========================
+# SYSTEM AND EDITORS
+# ========================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# ========================
+# BACKUPS AND TEMPORARY
+# ========================
+
+# Backups
+*.bak
+*.backup
+*_backup
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+tmp/
+
+# ========================
+# TERRAFORM PROVIDERS SPECIFIC
+# ========================
+
+# Terraform providers (the ones causing the problem)
+**/terraform-provider-*
+**/registry.terraform.io/
+
+# ========================
+# OTHER
+# ========================
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Downloaded modules
+.terraform/modules/
+
+# Terraform checkpoints
+.checkpoint
+.terraformrc
+terraform.rc
+EOF
