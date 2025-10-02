@@ -1,4 +1,3 @@
-cd ~/Terraform_Projects/Terraform-Learning-Journey
 cat > .gitignore << 'EOF'
 # ========================
 # TERRAFORM
